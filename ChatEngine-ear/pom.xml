@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <artifactId>ChatEngine</artifactId>
-    <groupId>hn.com.chat</groupId>
-    <version>1.0.0</version>
-  </parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>ChatEngine</artifactId>
+		<groupId>hn.com.chat</groupId>
+		<version>1.0.0</version>
+	</parent>
 
-  <artifactId>ChatEngine-ear</artifactId>
-  <packaging>ear</packaging>
+	<artifactId>ChatEngine-ear</artifactId>
+	<packaging>ear</packaging>
 
-  <name>ChatEngine-ear</name>
+	<name>ChatEngine-ear</name>
 
- <properties>
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<weblogic.version>12.1</weblogic.version>
 		<weblogic.version.minor>${weblogic.version}.3-0-0</weblogic.version.minor>
@@ -21,7 +22,7 @@
 		<weblogic.password>welcome1</weblogic.password>
 		<weblogic.remote>true</weblogic.remote>
 		<weblogic.targets>AdminServer</weblogic.targets>
-	</properties> 
+	</properties>
 
 	<build>
 		<finalName>${project.name}</finalName>
@@ -45,7 +46,7 @@
 							<artifactId>ChatEngine-ejb</artifactId>
 							<uri>ChatEngine-ejb.jar</uri>
 							<bundleFileName>ChatEngine-ejb.jar</bundleFileName>
-						</ejbModule>						
+						</ejbModule>
 					</modules>
 				</configuration>
 			</plugin>
@@ -83,13 +84,13 @@
 			</plugin>
 		</plugins>
 	</build>
-	
-    <dependencies>
-        <dependency>
-            <groupId>hn.com.chat</groupId>
-            <artifactId>ChatEngine-ejb</artifactId>
-            <version>1.0.0</version>
-            <type>ejb</type>
-        </dependency>
-    </dependencies>
+
+	<dependencies>
+		<dependency>
+			<groupId>hn.com.chat</groupId>
+			<artifactId>ChatEngine-ejb</artifactId>
+			<version>1.0.0</version>
+			<type>ejb</type>
+		</dependency>
+	</dependencies>
 </project>
