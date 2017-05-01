@@ -1,4 +1,4 @@
-package hn.com.chat.core;
+package hn.com.chat.interfaces;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -6,6 +6,7 @@ import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 import javax.jws.soap.SOAPBinding.ParameterStyle;
 
+import hn.com.chat.exception.ChatException;
 import hn.com.chat.response.MsgResponse;
 
 /**
@@ -33,6 +34,6 @@ public interface IChatOperations {
 	 */
 	@WebMethod(operationName = "sendTxtMsg")
 	MsgResponse sendTxtMsg(@WebParam(name = "to") String to, @WebParam(name = "from") String from,
-			@WebParam(name = "msg") String msg);
+			@WebParam(name = "msg") String msg) throws ChatException;
 
 }

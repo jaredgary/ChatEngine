@@ -1,8 +1,9 @@
-package hn.com.chat.core;
+package hn.com.chat.impl;
 
 import javax.ejb.Stateless;
 import javax.jws.WebService;
 
+import hn.com.chat.interfaces.IChatOperations;
 import hn.com.chat.response.MsgResponse;
 
 /**
@@ -14,7 +15,7 @@ import hn.com.chat.response.MsgResponse;
  * @since May 1, 2017
  */
 @Stateless
-@WebService(serviceName = "ChatComponent", endpointInterface = "hn.com.chat.core.IChatOperations")
+@WebService(serviceName = "ChatComponent", endpointInterface = "hn.com.chat.interfaces.IChatOperations")
 public class ChatImplementation implements IChatOperations {
 
 	/**
