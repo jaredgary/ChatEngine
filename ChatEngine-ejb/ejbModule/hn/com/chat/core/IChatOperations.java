@@ -6,6 +6,8 @@ import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 import javax.jws.soap.SOAPBinding.ParameterStyle;
 
+import hn.com.chat.response.MsgResponse;
+
 /**
  * The interface IChatOperations contains the methods operations for
  * ChatEngine-ejb project.
@@ -30,7 +32,7 @@ public interface IChatOperations {
 	 * @return the string
 	 */
 	@WebMethod(operationName = "sendTxtMsg")
-	String sendTxtMsg(@WebParam(name = "to") String to, @WebParam(name = "from") String from,
+	MsgResponse sendTxtMsg(@WebParam(name = "to") String to, @WebParam(name = "from") String from,
 			@WebParam(name = "msg") String msg);
 
 }

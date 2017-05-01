@@ -3,8 +3,10 @@ package hn.com.chat.core;
 import javax.ejb.Stateless;
 import javax.jws.WebService;
 
+import hn.com.chat.response.MsgResponse;
+
 /**
- * The class ChatImplementation contains the imnplementations of all operations
+ * The class ChatImplementation contains the implementation of all operations
  * for ChatEngine-ejb project.
  *
  * @author Gary Gonzalez <mailto:garygonzalezzepeda@gmail.com/>
@@ -28,7 +30,7 @@ public class ChatImplementation implements IChatOperations {
 	 * java.lang.String, java.lang.String)
 	 */
 	@Override
-	public String sendTxtMsg(final String to, final String from, final String msg) {
+	public MsgResponse sendTxtMsg(final String to, final String from, final String msg) {
 		return null;
 	}
 
